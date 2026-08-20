@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Levelline — Compensation Intelligence System
 
-## Getting Started
+## About
 
-First, run the development server:
+Levelline is a compensation intelligence platform built for Track B (Frontend
+Engineer role). Unlike a typical salary-listing site, it treats **level** — not
+job title — as the primary unit of comparison. A "Senior SDE" at one company and
+an "E5" at another can sit at completely different points on the pay scale even
+with similar titles, so every record here is normalized onto a 1–10 level scale
+alongside its company-specific title. This makes salaries genuinely comparable
+across companies, not just listed side by side.
+
+The app lets users search and filter a large compensation dataset, sort by any
+column, drill into per-company pay breakdowns with a level-distribution chart,
+and select up to 4 records to compare directly on a shared set of attributes
+(base, bonus, stock, total comp, and where that number falls within its level's
+range).
+
+Built with Next.js, React, TypeScript, and TailwindCSS, using TanStack Table and
+TanStack Virtual so the table stays fast and responsive even with hundreds of rows.
+
+## Running it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open `http://localhost:3000` in your browser. The app reloads automatically
+as you edit files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build and run a production version instead:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm run start
+```
